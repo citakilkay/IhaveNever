@@ -2,14 +2,16 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { ArrowLeft, RotateCcw, ArrowRight } from 'lucide-react-native';
-import { QuestionCard } from '@/components/QuestionCard';
+import { QuestionCard, QuestionCardRef } from '@/components/QuestionCard';
 import { useAtomValue, useSetAtom } from 'jotai';
 import { gameStateAtom, getNextQuestionAtom, resetGameAtom } from '@/atoms/game';
+import { useRef } from 'react';
 
 export default function GameScreen() {
   const gameState = useAtomValue(gameStateAtom);
   const getNextQuestion = useSetAtom(getNextQuestionAtom);
   const resetGame = useSetAtom(resetGameAtom);
+  const questionCardRef = useRef<QuestionCardRef>(null);
 
   const handleNextQuestion = () => {
     if (!gameState.currentCategory) return;
@@ -20,10 +22,19 @@ export default function GameScreen() {
       Alert.alert(
         'All Questions Used!',
         'You\'ve seen all questions in this category. Starting over!',
-        [{ text: 'OK', onPress: getNextQuestion }]
+        [{ text: 'OK', onPress: () => router.push('/') }]
       );
     } else {
-      getNextQuestion();
+      // Get the new color first
+      const newColor = gameState.currentCategory.color; // #TODO -- use the question color
+
+      // Trigger animation with the new color
+      questionCardRef.current?.triggerChangeAnimation(newColor);
+
+      // Then update the question
+      setTimeout(() => {
+        getNextQuestion();
+      }, 500);
     }
   };
 
@@ -91,6 +102,7 @@ export default function GameScreen() {
 
       <View style={styles.content}>
         <QuestionCard
+          ref={questionCardRef}
           question={gameState.currentQuestion}
           questionNumber={gameState.questionIndex + 1}
           totalQuestions={gameState.currentCategory.questions.length}
