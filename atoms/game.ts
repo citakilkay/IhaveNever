@@ -16,7 +16,7 @@ export const gameStateAtom = atom<GameState>(initialGameState);
 export const startGameAtom = atom(
   null,
   (get, set, category: GameCategory) => {
-    const shuffledQuestions = [...category.questions[]].sort(() => Math.random() - 0.5);
+    const shuffledQuestions = [...category.questions['en']].sort(() => Math.random() - 0.5);
     const firstQuestion: GameQuestion = {
       id: `${category.id}-0`,
       text: shuffledQuestions[0],

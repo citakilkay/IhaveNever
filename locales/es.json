@@ -30,5 +30,40 @@
         "party": "Fiesta & Vida Nocturna",
         "dating": "Citas & Romance",
         "wild": "Salvaje & Loco"
+    },
+    "navigation": {
+        "categories": "Categorías",
+        "play": "Jugar",
+        "settings": "Ajustes"
+    },
+    "settings": {
+        "settingsTitle": "Ajustes",
+        "settingsSubtitle": "Información del juego y preferencias",
+        "gameInfo": "Información del Juego",
+        "language": "Idioma",
+        "about": "Acerca de",
+        "aboutSubtitle": "Reglas del juego e información de versión",
+        "sendFeedback": "Enviar Comentarios",
+        "feedbackSubtitle": "Ayúdanos a mejorar el juego",
+        "rateApp": "Calificar la App",
+        "rateSubtitle": "Muestra algo de amor ⭐⭐⭐⭐⭐",
+        "howToPlay": "Cómo Jugar",
+        "gameRules": "1. Reúne a tus amigos alrededor\n2. Elige categorías\n3. Lee la pregunta en voz alta\n4. ¡Cualquiera que SÍ lo haya hecho bebe!\n5. Toca \"Siguiente Pregunta\" para continuar",
+        "madeWithLove": "Hecho para noches inolvidables"
+    },
+    "dialogs": {
+        "aboutTitle": "Acerca de Yo Nunca",
+        "aboutMessage": "¡Un juego divertido para grupos de amigos! Selecciona categorías y túrnense para leer preguntas. Bebe si SÍ has hecho lo que menciona la pregunta.\n\nVersión 1.0.0",
+        "feedbackTitle": "Enviar Comentarios",
+        "feedbackMessage": "¡Ayúdanos a mejorar el juego! ¿Qué características te gustaría ver?",
+        "rateTitle": "Calificar la App",
+        "rateMessage": "¿Disfrutando el juego? ¡Por favor califícanos en la tienda de aplicaciones!"
+    },
+    "buttons": {
+        "ok": "OK",
+        "cancel": "Cancelar",
+        "sendEmail": "Enviar Email",
+        "later": "Más Tarde",
+        "rateNow": "Calificar Ahora"
     }
 }

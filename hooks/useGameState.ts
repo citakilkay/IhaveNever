@@ -10,11 +10,11 @@ export function useGameState() {
   });
 
   const startGame = useCallback((category: GameCategory) => {
-    const shuffledQuestions = [...category.questions[]].sort(() => Math.random() - 0.5);
+    const shuffledQuestions = [...category.questions['en']].sort(() => Math.random() - 0.5);
     const firstQuestion: GameQuestion = {
       id: `${category.id}-0`,
       text: shuffledQuestions[0],
-      category: category.name,
+      category: category.name['en'],
     };
 
     setGameState({

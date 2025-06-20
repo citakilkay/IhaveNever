@@ -1,0 +1,69 @@
+{
+    "game": {
+        "resetConfirm": {
+            "title": "Reiniciar Jogo",
+            "message": "Tem certeza de que deseja voltar para as categorias?",
+            "cancel": "Cancelar",
+            "confirm": "Reiniciar"
+        },
+        "allQuestionsUsed": {
+            "title": "Todas as Perguntas Foram Usadas!",
+            "message": "Você viu todas as perguntas desta categoria. Começando de novo!"
+        },
+        "instructions": "Beba se você JÁ fez isso! ",
+        "noGameActive": {
+            "title": "Nenhum Jogo Ativo",
+            "subtitle": "Vá para Categorias e selecione uma para começar a jogar!",
+            "button": "Escolher Categoria"
+        },
+        "playingNow": "Jogando Agora",
+        "questionsLeft": "{count} perguntas restantes",
+        "nextQuestion": "Próxima Pergunta"
+    },
+    "categories": {
+        "general": "Diversão Geral",
+        "travel": "Viagens & Aventura",
+        "food": "Comida & Bebidas",
+        "technology": "Tecnologia & Redes Sociais",
+        "childhood": "Infância & Escola",
+        "relationships": "Amigos & Família",
+        "party": "Festa & Vida Noturna",
+        "dating": "Encontros & Romance",
+        "wild": "Louco & Maluco"
+    },
+    "navigation": {
+        "categories": "Categorias",
+        "play": "Jogar",
+        "settings": "Configurações"
+    },
+    "settings": {
+        "settingsTitle": "Configurações",
+        "settingsSubtitle": "Informações e preferências do jogo",
+        "gameInfo": "Informações do Jogo",
+        "language": "Idioma",
+        "about": "Sobre",
+        "aboutSubtitle": "Regras do jogo e informações da versão",
+        "sendFeedback": "Enviar Comentários",
+        "feedbackSubtitle": "Ajude-nos a melhorar o jogo",
+        "rateApp": "Avaliar o Aplicativo",
+        "rateSubtitle": "Mostre seu apoio ",
+        "howToPlay": "Como Jogar",
+        "gameRules": "1. Reúna seus amigos\n2. Escolha categorias\n3. Leia a pergunta em voz alta\n4. Quem JÁ fez isso bebe!\n5. Toque em \"Próxima Pergunta\" para continuar",
+        "madeWithLove": "Feito para noites inesquecíveis"
+    },
+    "dialogs": {
+        "aboutTitle": "Sobre Eu Nunca",
+        "aboutMessage": "Um jogo divertido para grupos de amigos! Selecione categorias e reveze-se para ler as perguntas. Beba se você JÁ fez o que é mencionado na pergunta.\n\nVersão 1.0.0",
+        "feedbackTitle": "Enviar Comentários",
+        "feedbackMessage": "Ajude-nos a melhorar o jogo! Quais recursos você gostaria de ver?",
+        "rateTitle": "Avaliar o Aplicativo",
+        "rateMessage": "Está gostando do jogo? Por favor, avalie-nos na loja de aplicativos!"
+    },
+    "buttons": {
+        "ok": "OK",
+        "cancel": "Cancelar",
+        "sendEmail": "Enviar E-mail",
+        "later": "Depois",
+        "rateNow": "Avaliar Agora"
+    }
+}

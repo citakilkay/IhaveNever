@@ -30,5 +30,40 @@
         "party": "Party & Nightlife",
         "dating": "Dating & Romance",
         "wild": "Wild & Crazy"
+    },
+    "navigation": {
+        "categories": "Categories",
+        "play": "Play",
+        "settings": "Settings"
+    },
+    "settings": {
+        "settingsTitle": "Settings",
+        "settingsSubtitle": "Game info and preferences",
+        "gameInfo": "Game Info",
+        "language": "Language",
+        "about": "About",
+        "aboutSubtitle": "Game rules and version info",
+        "sendFeedback": "Send Feedback",
+        "feedbackSubtitle": "Help us improve the game",
+        "rateApp": "Rate the App",
+        "rateSubtitle": "Show some love ⭐⭐⭐⭐⭐",
+        "howToPlay": "How to Play",
+        "gameRules": "1. Gather your friends around\n2. Choose categories\n3. Read the question aloud\n4. Anyone who HAS done it drinks!\n5. Tap \"Next Question\" to continue",
+        "madeWithLove": "Made for unforgettable nights"
+    },
+    "dialogs": {
+        "aboutTitle": "About I Have Never",
+        "aboutMessage": "A fun party game for groups of friends! Select categories and take turns reading questions. Drink if you HAVE done the thing mentioned in the question.\n\nVersion 1.0.0",
+        "feedbackTitle": "Send Feedback",
+        "feedbackMessage": "Help us improve the game! What features would you like to see?",
+        "rateTitle": "Rate the App",
+        "rateMessage": "Enjoying the game? Please rate us in the app store!"
+    },
+    "buttons": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "sendEmail": "Send Email",
+        "later": "Later",
+        "rateNow": "Rate Now"
     }
 }

@@ -2,25 +2,27 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert, Linking } from 'react-
 import { LinearGradient } from 'expo-linear-gradient';
 import { LanguageSelector } from '@/components/LanguageSelector'
 import { Info, Heart, Star, MessageCircle } from 'lucide-react-native';
+import { useLocalization } from '@/hooks/useLocalization';
 
 
 export default function SettingsScreen() {
+  const { t } = useLocalization();
   const handleAbout = () => {
     Alert.alert(
-      'About I Have Never',
-      'A fun party game for groups of friends! Select a category and take turns reading questions. Drink if you HAVE done the thing mentioned in the question.\n\nVersion 1.0.0',
-      [{ text: 'OK' }]
+      t('aboutTitle'),
+      t('aboutMessage'),
+      [{ text: t('ok') }]
     );
   };
 
   const handleFeedback = () => {
     Alert.alert(
-      'Send Feedback',
-      'Help us improve the game! What features would you like to see?',
+      t('feedbackTitle'),
+      t('feedbackMessage'),
       [
-        { text: 'Cancel', style: 'cancel' },
+        { text: t('cancel'), style: 'cancel' },
         {
-          text: 'Send Email',
+          text: t('sendEmail'),
           onPress: () => Linking.openURL('mailto:feedback@ihavenevergame.com')
         }
       ]
@@ -29,11 +31,11 @@ export default function SettingsScreen() {
 
   const handleRate = () => {
     Alert.alert(
-      'Rate the App',
-      'Enjoying the game? Please rate us in the app store!',
+      t('rateTitle'),
+      t('rateMessage'),
       [
-        { text: 'Later', style: 'cancel' },
-        { text: 'Rate Now', onPress: () => { } }
+        { text: t('later'), style: 'cancel' },
+        { text: t('rateNow'), onPress: () => { } }
       ]
     );
   };
@@ -44,13 +46,13 @@ export default function SettingsScreen() {
       style={styles.container}
     >
       <View style={styles.header}>
-        <Text style={styles.title}>Settings</Text>
-        <Text style={styles.subtitle}>Game info and preferences</Text>
+        <Text style={styles.title}>{t('settingsTitle')}</Text>
+        <Text style={styles.subtitle}>{t('settingsSubtitle')}</Text>
       </View>
 
       <View style={styles.content}>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Game Info</Text>
+          <Text style={styles.sectionTitle}>{t('gameInfo')}</Text>
           <LanguageSelector />
 
           <TouchableOpacity style={styles.option} onPress={handleAbout}>
@@ -59,8 +61,8 @@ export default function SettingsScreen() {
                 <Info size={20} color="#fff" />
               </View>
               <View>
-                <Text style={styles.optionTitle}>About</Text>
-                <Text style={styles.optionSubtitle}>Game rules and version info</Text>
+                <Text style={styles.optionTitle}>{t('about')}</Text>
+                <Text style={styles.optionSubtitle}>{t('aboutSubtitle')}</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -71,8 +73,8 @@ export default function SettingsScreen() {
                 <MessageCircle size={20} color="#fff" />
               </View>
               <View>
-                <Text style={styles.optionTitle}>Send Feedback</Text>
-                <Text style={styles.optionSubtitle}>Help us improve the game</Text>
+                <Text style={styles.optionTitle}>{t('sendFeedback')}</Text>
+                <Text style={styles.optionSubtitle}>{t('feedbackSubtitle')}</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -83,28 +85,22 @@ export default function SettingsScreen() {
                 <Star size={20} color="#fff" />
               </View>
               <View>
-                <Text style={styles.optionTitle}>Rate the App</Text>
-                <Text style={styles.optionSubtitle}>Show some love ⭐⭐⭐⭐⭐</Text>
+                <Text style={styles.optionTitle}>{t('rateApp')}</Text>
+                <Text style={styles.optionSubtitle}>{t('rateSubtitle')}</Text>
               </View>
             </View>
           </TouchableOpacity>
         </View>
 
         <View style={styles.gameRules}>
-          <Text style={styles.rulesTitle}>How to Play</Text>
-          <Text style={styles.rulesText}>
-            1. Gather your friends around{'\n'}
-            2. Choose a category{'\n'}
-            3. Read the question aloud{'\n'}
-            4. Anyone who HAS done it drinks!{'\n'}
-            5. Tap "Next Question" to continue
-          </Text>
+          <Text style={styles.rulesTitle}>{t('howToPlay')}</Text>
+          <Text style={styles.rulesText}>{t('gameRules')}</Text>
         </View>
 
         <View style={styles.footer}>
           <View style={styles.footerContent}>
             <Heart size={16} color="#ff6b9d" />
-            <Text style={styles.footerText}>Made for unforgettable nights</Text>
+            <Text style={styles.footerText}>{t('madeWithLove')}</Text>
           </View>
         </View>
       </View>

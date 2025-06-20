@@ -1,0 +1,69 @@
+{
+    "game": {
+        "resetConfirm": {
+            "title": "Oyunu Sıfırla",
+            "message": "Kategorilere geri dönmek istediğinizden emin misiniz?",
+            "cancel": "İptal",
+            "confirm": "Sıfırla"
+        },
+        "allQuestionsUsed": {
+            "title": "Tüm Sorular Kullanıldı!",
+            "message": "Bu kategorideki tüm soruları gördünüz. Yeniden başlıyor!"
+        },
+        "instructions": "Bunu YAPTIYSAN iç! ",
+        "noGameActive": {
+            "title": "Aktif Oyun Yok",
+            "subtitle": "Oynamaya başlamak için Kategorilere gidin ve bir tane seçin!",
+            "button": "Kategori Seç"
+        },
+        "playingNow": "Şu Anda Oynanıyor",
+        "questionsLeft": "{count} soru kaldı",
+        "nextQuestion": "Sonraki Soru"
+    },
+    "categories": {
+        "general": "Genel Eğlence",
+        "travel": "Seyahat & Macera",
+        "food": "Yiyecek & İçecek",
+        "technology": "Teknoloji & Sosyal Medya",
+        "childhood": "Çocukluk & Okul",
+        "relationships": "Arkadaşlar & Aile",
+        "party": "Parti & Gece Hayatı",
+        "dating": "Flört & Romantizm",
+        "wild": "Çılgın & Vahşi"
+    },
+    "navigation": {
+        "categories": "Kategoriler",
+        "play": "Oyna",
+        "settings": "Ayarlar"
+    },
+    "settings": {
+        "settingsTitle": "Ayarlar",
+        "settingsSubtitle": "Oyun bilgisi ve tercihleri",
+        "gameInfo": "Oyun Bilgisi",
+        "language": "Dil",
+        "about": "Hakkında",
+        "aboutSubtitle": "Oyun kuralları ve sürüm bilgisi",
+        "sendFeedback": "Geri Bildirim Gönder",
+        "feedbackSubtitle": "Oyunu geliştirmemize yardımcı olun",
+        "rateApp": "Uygulamayı Değerlendir",
+        "rateSubtitle": "Bize destek olun ",
+        "howToPlay": "Nasıl Oynanır",
+        "gameRules": "1. Arkadaşlarınızı toplayın\n2. Kategoriler seçin\n3. Soruyu yüksek sesle okuyun\n4. Bunu YAPAN herkes içsin!\n5. Devam etmek için \"Sonraki Soru\"ya dokunun",
+        "madeWithLove": "Unutulmaz geceler için yapıldı"
+    },
+    "dialogs": {
+        "aboutTitle": "Hiç Hakkında",
+        "aboutMessage": "Arkadaş grupları için eğlenceli bir parti oyunu! Kategoriler seçin ve sırayla soruları okuyun. Soruda bahsedileni YAPTIYSANIZ için.\n\nSürüm 1.0.0",
+        "feedbackTitle": "Geri Bildirim Gönder",
+        "feedbackMessage": "Oyunu geliştirmemize yardımcı olun! Hangi özellikleri görmek istersiniz?",
+        "rateTitle": "Uygulamayı Değerlendir",
+        "rateMessage": "Oyundan keyif alıyor musunuz? Lütfen bizi uygulama mağazasında değerlendirin!"
+    },
+    "buttons": {
+        "ok": "TAMAM",
+        "cancel": "İptal",
+        "sendEmail": "E-posta Gönder",
+        "later": "Sonra",
+        "rateNow": "Şimdi Değerlendir"
+    }
+}

@@ -1,39 +1,40 @@
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { useLocalization } from '@/hooks/useLocalization';
 
 export const LanguageSelector = () => {
-    const { language, setLanguage } = useAppState();
+    const { currentLocale, changeLanguage } = useLocalization();
 
     return (
         <View style={styles.container}>
             <TouchableOpacity
-                onPress={() => setLanguage('en')}
-                disabled={language === 'en'}
+                onPress={() => changeLanguage('en')}
+                disabled={currentLocale === 'en'}
             >
-                <Text style={[styles.flag, language === 'en' && styles.active]}>🇬🇧</Text>
+                <Text style={[styles.flag, currentLocale === 'en' && styles.active]}>🇬🇧</Text>
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => setLanguage('es')}
-                disabled={language === 'es'}
+                onPress={() => changeLanguage('es')}
+                disabled={currentLocale === 'es'}
             >
-                <Text style={[styles.flag, language === 'es' && styles.active]}>🇪🇸</Text>
+                <Text style={[styles.flag, currentLocale === 'es' && styles.active]}>🇪🇸</Text>
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => setLanguage('fr')}
-                disabled={language === 'fr'}
+                onPress={() => changeLanguage('fr')}
+                disabled={currentLocale === 'fr'}
             >
-                <Text style={[styles.flag, language === 'fr' && styles.active]}>🇫🇷</Text>
+                <Text style={[styles.flag, currentLocale === 'fr' && styles.active]}>🇫🇷</Text>
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => setLanguage('pt')}
-                disabled={language === 'pt'}
+                onPress={() => changeLanguage('pt')}
+                disabled={currentLocale === 'pt'}
             >
-                <Text style={[styles.flag, language === 'es' && styles.active]}>🇵🇹</Text>
+                <Text style={[styles.flag, currentLocale === 'pt' && styles.active]}>🇵🇹</Text>
             </TouchableOpacity>
             <TouchableOpacity
-                onPress={() => setLanguage('tr')}
-                disabled={language === 'tr'}
+                onPress={() => changeLanguage('tr')}
+                disabled={currentLocale === 'tr'}
             >
-                <Text style={[styles.flag, language === 'tr' && styles.active]}>🇹🇷</Text>
+                <Text style={[styles.flag, currentLocale === 'tr' && styles.active]}>🇹🇷</Text>
             </TouchableOpacity>
         </View>
     );
