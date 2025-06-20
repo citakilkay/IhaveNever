@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, TouchableOpacity, Alert, Linking } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { LanguageSelector } from '@/components/LanguageSelector'
 import { Info, Heart, Star, MessageCircle } from 'lucide-react-native';
+
 
 export default function SettingsScreen() {
   const handleAbout = () => {
@@ -17,8 +19,8 @@ export default function SettingsScreen() {
       'Help us improve the game! What features would you like to see?',
       [
         { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Send Email', 
+        {
+          text: 'Send Email',
           onPress: () => Linking.openURL('mailto:feedback@ihavenevergame.com')
         }
       ]
@@ -31,7 +33,7 @@ export default function SettingsScreen() {
       'Enjoying the game? Please rate us in the app store!',
       [
         { text: 'Later', style: 'cancel' },
-        { text: 'Rate Now', onPress: () => {} }
+        { text: 'Rate Now', onPress: () => { } }
       ]
     );
   };
@@ -49,7 +51,8 @@ export default function SettingsScreen() {
       <View style={styles.content}>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Game Info</Text>
-          
+          <LanguageSelector />
+
           <TouchableOpacity style={styles.option} onPress={handleAbout}>
             <View style={styles.optionLeft}>
               <View style={[styles.optionIcon, { backgroundColor: '#4ecdc4' }]}>

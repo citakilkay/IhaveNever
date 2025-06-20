@@ -1,0 +1,34 @@
+{
+    "game": {
+        "resetConfirm": {
+            "title": "Reset Game",
+            "message": "Are you sure you want to go back to categories?",
+            "cancel": "Cancel",
+            "confirm": "Reset"
+        },
+        "allQuestionsUsed": {
+            "title": "All Questions Used!",
+            "message": "You've seen all questions in this category. Starting over!"
+        },
+        "instructions": "Drink if you HAVE done this! 🍻",
+        "noGameActive": {
+            "title": "No Game Active",
+            "subtitle": "Go to Categories and select one to start playing!",
+            "button": "Choose Category"
+        },
+        "playingNow": "Playing Now",
+        "questionsLeft": "{count} questions left",
+        "nextQuestion": "Next Question"
+    },
+    "categories": {
+        "general": "General Fun",
+        "travel": "Travel & Adventure",
+        "food": "Food & Drinks",
+        "technology": "Tech & Social Media",
+        "childhood": "Childhood & School",
+        "relationships": "Friends & Family",
+        "party": "Party & Nightlife",
+        "dating": "Dating & Romance",
+        "wild": "Wild & Crazy"
+    }
+}

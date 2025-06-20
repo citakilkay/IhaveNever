@@ -6,11 +6,20 @@ export interface GameQuestion {
 
 export interface GameCategory {
   id: string;
-  name: string;
-  description: string;
+  name: {
+    en: string;
+    es: string;
+  };
+  description: {
+    en: string;
+    es: string;
+  };
   color: string;
   icon: string;
-  questions: string[];
+  questions: {
+    en: string[];
+    es: string[];
+  };
 }
 
 export interface GameState {

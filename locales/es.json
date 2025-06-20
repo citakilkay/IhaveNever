@@ -1,0 +1,34 @@
+{
+    "game": {
+        "resetConfirm": {
+            "title": "Reiniciar Juego",
+            "message": "¿Seguro que quieres volver a las categorías?",
+            "cancel": "Cancelar",
+            "confirm": "Reiniciar"
+        },
+        "allQuestionsUsed": {
+            "title": "¡Todas las preguntas usadas!",
+            "message": "Has visto todas las preguntas en esta categoría. ¡Empezando de nuevo!"
+        },
+        "instructions": "¡Bebe si HAS hecho esto! 🍻",
+        "noGameActive": {
+            "title": "Juego Inactivo",
+            "subtitle": "¡Ve a Categorías y selecciona una para empezar a jugar!",
+            "button": "Elegir Categoría"
+        },
+        "playingNow": "Jugando Ahora",
+        "questionsLeft": "{count} preguntas restantes",
+        "nextQuestion": "Siguiente Pregunta"
+    },
+    "categories": {
+        "general": "Diversión General",
+        "travel": "Viajes & Aventura",
+        "food": "Comida & Bebidas",
+        "technology": "Tecnología & Redes",
+        "childhood": "Infancia & Escuela",
+        "relationships": "Amigos & Familia",
+        "party": "Fiesta & Vida Nocturna",
+        "dating": "Citas & Romance",
+        "wild": "Salvaje & Loco"
+    }
+}

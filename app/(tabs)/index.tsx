@@ -30,7 +30,7 @@ export default function CategoriesScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        {gameCategories.map((category) => (
+        {[...gameCategories].sort(() => Math.random() - 0.5).map((category) => (
           <CategoryCard
             key={category.id}
             category={category}
