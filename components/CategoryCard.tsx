@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { GameCategory } from '@/types/game';
+import { useLocalization } from '@/hooks/useLocalization';
 
 interface CategoryCardProps {
   category: GameCategory;
@@ -8,7 +9,8 @@ interface CategoryCardProps {
 }
 
 export function CategoryCard({ category, onPress }: CategoryCardProps) {
-  
+  const { currentLocale } = useLocalization();
+  console.log(category.questions[currentLocale])
   return (
     <TouchableOpacity
       style={styles.container}
@@ -23,10 +25,10 @@ export function CategoryCard({ category, onPress }: CategoryCardProps) {
       >
         <View style={styles.content}>
           <Text style={styles.icon}>{category.icon}</Text>
-          <Text style={styles.name}>{category.name}</Text>
-          <Text style={styles.description}>{category.description}</Text>
+          <Text style={styles.name}>{category.name[currentLocale]}</Text>
+          <Text style={styles.description}>{category.description[currentLocale]}</Text>
           <Text style={styles.questionCount}>
-            {category.questions.length} questions
+            {category.questions[currentLocale].length} questions
           </Text>
         </View>
       </LinearGradient>

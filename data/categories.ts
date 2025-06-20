@@ -3,8 +3,20 @@ import { GameCategory } from '@/types/game';
 export const gameCategories: GameCategory[] = [
   {
     id: 'general',
-    name: { en: 'General Fun', es: '' },
-    description: { en: 'Classic never have I ever questions', es: '' },
+    name: {
+      en: 'General Fun',
+      es: 'Diversión General',
+      fr: 'Amusement Général',
+      pt: 'Diversão Geral',
+      tr: 'Genel Eğlence'
+    },
+    description: {
+      en: 'Classic never have I ever questions',
+      es: 'Preguntas clásicas de "Nunca Nunca"',
+      fr: 'Questions classiques de "Je n\'ai jamais"',
+      pt: 'Perguntas clássicas de "Nunca Fiz"',
+      tr: 'Klasik "Hiç Yapmadım" soruları'
+    },
     color: '#ff6b9d',
     icon: '🎉',
     questions: {
@@ -25,13 +37,28 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever waved at someone who wasn\'t waving at me',
         'Never have I ever forgotten where I parked my car',
       ],
-      es: []
+      es: [],
+      fr: [],
+      pt: [],
+      tr: []
     }
   },
   {
     id: 'travel',
-    name: { en: 'Travel & Adventure', es: '' },
-    description: { en: 'Questions about exploring the world', es: '' },
+    name: {
+      en: 'Travel & Adventure',
+      es: 'Viajes & Aventuras',
+      fr: 'Voyages & Aventures',
+      pt: 'Viagens & Aventura',
+      tr: 'Seyahat & Macera'
+    },
+    description: {
+      en: 'Questions about exploring the world',
+      es: 'Preguntas sobre explorar el mundo',
+      fr: 'Questions sur l\'exploration du monde',
+      pt: 'Perguntas sobre explorar o mundo',
+      tr: 'Dünyayı keşfetmekle ilgili sorular'
+    },
     color: '#4ecdc4',
     icon: '✈️',
     questions: {
@@ -52,13 +79,28 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever slept under the stars',
         'Never have I ever been to a different time zone',
       ],
-      es: []
+      es: [],
+      fr: [],
+      pt: [],
+      tr: []
     }
   },
   {
     id: 'food',
-    name: { en: 'Food & Drinks', es: '' },
-    description: { en: 'Culinary adventures and mishaps', es: '' },
+    name: {
+      en: 'Food & Drinks',
+      es: 'Comida & Bebidas',
+      fr: 'Nourriture & Boissons',
+      pt: 'Comida & Bebidas',
+      tr: 'Yiyecek & İçecek'
+    },
+    description: {
+      en: 'Culinary adventures and mishaps',
+      es: 'Aventuras culinarias y percances',
+      fr: 'Aventures et mésaventures culinaires',
+      pt: 'Aventuras e desventuras culinárias',
+      tr: 'Mutfak maceraları ve aksilikler'
+    },
     color: '#45b7d1',
     icon: '🍕',
     questions: {
@@ -78,13 +120,29 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever eaten something I was allergic to by mistake',
         'Never have I ever tried to recreate a recipe from a cooking show',
         'Never have I ever eaten street food',
-      ], es: []
+      ],
+      es: [],
+      fr: [],
+      pt: [],
+      tr: []
     }
   },
   {
     id: 'technology',
-    name: { en: 'Tech & Social Media', es: '' },
-    description: { en: 'Digital age experiences', es: '' },
+    name: {
+      en: 'Tech & Social Media',
+      es: 'Tecnología & Redes Sociales',
+      fr: 'Technologie & Réseaux sociaux',
+      pt: 'Tecnologia & Redes Sociais',
+      tr: 'Teknoloji & Sosyal Medya'
+    },
+    description: {
+      en: 'Digital age experiences',
+      es: 'Experiencias de la era digital',
+      fr: 'Expériences de l\'ère numérique',
+      pt: 'Experiências da era digital',
+      tr: 'Dijital çağ deneyimleri'
+    },
     color: '#96ceb4',
     icon: '📱',
     questions: {
@@ -109,8 +167,20 @@ export const gameCategories: GameCategory[] = [
   },
   {
     id: 'childhood',
-    name: { en: 'Childhood & School', es: '' },
-    description: { en: 'Nostalgic memories from younger days', es: '' },
+    name: {
+      en: 'Childhood & School',
+      es: 'Infancia & Escuela',
+      fr: 'Enfance & École',
+      pt: 'Infância & Escola',
+      tr: 'Çocukluk & Okul'
+    },
+    description: {
+      en: 'Nostalgic memories from younger days',
+      es: 'Recuerdos nostálgicos de la juventud',
+      fr: 'Souvenirs nostalgiques du plus jeune âge',
+      pt: 'Memórias nostálgicas da juventude',
+      tr: 'Gençlik günlerinden nostaljik anılar'
+    },
     color: '#feca57',
     icon: '🎒',
     questions: {
@@ -135,8 +205,20 @@ export const gameCategories: GameCategory[] = [
   },
   {
     id: 'relationships',
-    name: { en: 'Friends & Family', es: '' },
-    description: { en: 'Questions about relationships and social life', es: '' },
+    name: {
+      en: 'Friends & Family',
+      es: 'Amigos & Familia',
+      fr: 'Amis & Famille',
+      pt: 'Amigos & Família',
+      tr: 'Arkadaşlar & Aile'
+    },
+    description: {
+      en: 'Questions about relationships and social life',
+      es: 'Preguntas sobre relaciones y vida social',
+      fr: 'Questions sur les relations et la vie sociale',
+      pt: 'Perguntas sobre relacionamentos e vida social',
+      tr: 'İlişkiler ve sosyal yaşam hakkında sorular'
+    },
     color: '#ff9ff3',
     icon: '💝',
     questions: {
@@ -162,8 +244,20 @@ export const gameCategories: GameCategory[] = [
   },
   {
     id: 'party',
-    name: { en: 'Party & Nightlife', es: '' },
-    description: { en: 'Wild nights and party adventures', es: '' },
+    name: {
+      en: 'Party & Nightlife',
+      es: 'Fiesta & Vida Nocturna',
+      fr: 'Fête & Vie nocturne',
+      pt: 'Festa & Vida Noturna',
+      tr: 'Parti & Gece Hayatı'
+    },
+    description: {
+      en: 'Wild nights and party adventures',
+      es: 'Noches locas y aventuras de fiesta',
+      fr: 'Nuits folles et aventures festives',
+      pt: 'Noites agitadas e aventuras de festa',
+      tr: 'Çılgın geceler ve parti maceraları'
+    },
     color: '#e74c3c',
     icon: '🍻',
     questions: {
@@ -193,13 +287,26 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever danced with a stranger',
         'Never have I ever tried to flirt and completely failed',
         'Never have I ever ended up in a stranger’s group photo'
-      ], es: []
+      ], es: [], fr: [], pt: [], tr: []
     }
   },
   {
     id: 'dating',
-    name: { en: 'Dating & Romance', es: '' },
-    description: { en: 'Love, dating, and romantic adventures', es: '' },
+    name: {
+      en: 'Dating & Romance',
+      es: 'Citas y Romance',
+      fr: 'Rencontres et Romance',
+      pt: 'Relacionamentos e Romance',
+      tr: 'İlişkiler ve Romantizm',
+    },
+
+    description: {
+      en: 'Love, dating, and romantic adventures',
+      es: 'Amor, citas y aventuras románticas',
+      fr: 'Amour, rencontres et aventures romantiques',
+      pt: 'Amor, encontros e aventuras românticas',
+      tr: 'Aşk, flört ve romantik maceralar',
+    },
     color: '#9b59b6',
     icon: '💕',
     questions: {
@@ -229,13 +336,26 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever imagined marrying someone on a first date',
         'Never have I ever accidentally said “I love you” too soon',
         'Never have I ever had butterflies before a date'
-      ], es: []
+      ], es: [], fr: [], pt: [], tr: []
     }
   },
   {
     id: 'wild',
-    name: { en: 'Wild & Crazy', es: '' },
-    description: { en: 'The most daring and outrageous experiences', es: '' },
+    name: {
+      en: 'Wild & Crazy',
+      es: 'Salvaje y Loco',
+      fr: 'Fou et Déjanté',
+      pt: 'Selvagem e Louco',
+      tr: 'Çılgın ve Delidolu',
+    },
+
+    description: {
+      en: 'The most daring and outrageous experiences',
+      es: 'Las experiencias más atrevidas y escandalosas',
+      fr: 'Les expériences les plus audacieuses et extravagantes',
+      pt: 'As experiências mais ousadas e escandalosas',
+      tr: 'En cesur ve uçuk kaçık deneyimler',
+    },
     color: '#f39c12',
     icon: '🔥',
     questions: {
@@ -265,7 +385,7 @@ export const gameCategories: GameCategory[] = [
         'Never have I ever danced in the rain just for fun',
         'Never have I ever skinny dipped with friends',
         'Never have I ever gone out in pajamas just for the thrill'
-      ], es: []
+      ], es: [], fr: [], pt: [], tr: []
     }
   }
 ];

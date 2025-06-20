@@ -9,16 +9,25 @@ export interface GameCategory {
   name: {
     en: string;
     es: string;
+    fr: string;
+    pt: string;
+    tr: string;
   };
   description: {
     en: string;
     es: string;
+    fr: string;
+    pt: string;
+    tr: string;
   };
   color: string;
   icon: string;
   questions: {
     en: string[];
     es: string[];
+    fr: string[];
+    pt: string[];
+    tr: string[];
   };
 }
 
