@@ -19,7 +19,7 @@ export default function SettingsScreen() {
         { text: 'Cancel', style: 'cancel' },
         { 
           text: 'Send Email', 
-          onPress: () => Linking.openURL('mailto:feedback@ihavenevergame.com')
+          onPress: () => Linking.openURL('mailto:citakilkay@gmail.com')
         }
       ]
     );

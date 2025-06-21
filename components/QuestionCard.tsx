@@ -9,7 +9,6 @@ import Animated, {
 } from 'react-native-reanimated';
 import { GameQuestion } from '@/types/game';
 import { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
-import { generateVariantColor } from '@/utils/colors';
 
 const { width } = Dimensions.get('window');
 
@@ -40,18 +39,14 @@ export const QuestionCard = forwardRef<QuestionCardRef, QuestionCardProps>(
     });
 
     useEffect(() => {
-      const variantColor = generateVariantColor(categoryColor, questionNumber);
-      setCurrentColor(variantColor);
       setDisplayQuestion(question);
     }, [question, categoryColor]);
 
 
     const triggerChangeAnimation = (newColor: string) => {
       setIsLoading(true);
-
       // After a short delay, update to new color
       setTimeout(() => {
-        setCurrentColor(newColor);
         setIsLoading(false);
       }, 500);
     };

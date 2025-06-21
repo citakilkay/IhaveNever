@@ -7,6 +7,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Classic never have I ever questions',
     color: '#ff6b9d',
     icon: '🎉',
+    matureContent: false,
     questions: [
       'Never have I ever eaten something off the floor',
       'Never have I ever forgotten someone\'s name right after being introduced',
@@ -23,6 +24,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever fallen down in public',
       'Never have I ever waved at someone who wasn\'t waving at me',
       'Never have I ever forgotten where I parked my car',
+      'Never have I ever laughed at a joke I didn’t get',
+      'Never have I ever locked myself out of my house',
+      'Never have I ever tried to learn a TikTok dance',
+      'Never have I ever talked to a pet like it’s a person',
+      'Never have I ever stayed up all night binge-watching videos'
     ]
   },
   {
@@ -31,6 +37,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Questions about exploring the world',
     color: '#4ecdc4',
     icon: '✈️',
+    matureContent: false,
     questions: [
       'Never have I ever been on a plane',
       'Never have I ever traveled to another continent',
@@ -47,6 +54,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever hitchhiked',
       'Never have I ever slept under the stars',
       'Never have I ever been to a different time zone',
+      'Never have I ever missed a train or bus in a foreign city',
+      'Never have I ever tried to speak a language I don’t know',
+      'Never have I ever traveled without booking a place to stay',
+      'Never have I ever been caught in a travel scam',
+      'Never have I ever extended a trip just because I loved the place'
     ]
   },
   {
@@ -55,6 +67,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Culinary adventures and mishaps',
     color: '#45b7d1',
     icon: '🍕',
+    matureContent: false,
     questions: [
       'Never have I ever eaten sushi',
       'Never have I ever tried a food I couldn\'t pronounce',
@@ -71,6 +84,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever eaten something I was allergic to by mistake',
       'Never have I ever tried to recreate a recipe from a cooking show',
       'Never have I ever eaten street food',
+      'Never have I ever ordered food just because it looked good on Instagram',
+      'Never have I ever eaten dessert before dinner',
+      'Never have I ever pretended to like a dish to be polite',
+      'Never have I ever spilled food on myself in public',
+      'Never have I ever cooked something without reading the recipe'
     ]
   },
   {
@@ -79,6 +97,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Digital age experiences',
     color: '#96ceb4',
     icon: '📱',
+    matureContent: false,
     questions: [
       'Never have I ever posted something I later regretted on social media',
       'Never have I ever stalked someone on social media',
@@ -95,6 +114,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever used a dating app',
       'Never have I ever posted a photo just for the likes',
       'Never have I ever googled something embarrassing about myself',
+      'Never have I ever deleted a post because it didn’t get enough likes',
+      'Never have I ever used incognito mode',
+      'Never have I ever spent hours watching random YouTube videos',
+      'Never have I ever responded “LOL” without actually laughing',
+      'Never have I ever dropped my phone on my face in bed'
     ]
   },
   {
@@ -103,6 +127,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Nostalgic memories from younger days',
     color: '#feca57',
     icon: '🎒',
+    matureContent: false,
     questions: [
       'Never have I ever cheated on a test',
       'Never have I ever had a crush on a teacher',
@@ -119,6 +144,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever broken something and blamed it on someone else',
       'Never have I ever been picked last for a team',
       'Never have I ever had a birthday party with a theme',
+      'Never have I ever traded lunch with a classmate',
+      'Never have I ever drawn on a desk',
+      'Never have I ever faked a parent’s signature',
+      'Never have I ever laughed so hard in class I got in trouble',
+      'Never have I ever forgotten my lines in a school play'
     ]
   },
   {
@@ -127,6 +157,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Questions about relationships and social life',
     color: '#ff9ff3',
     icon: '💝',
+    matureContent: false,
     questions: [
       'Never have I ever had a best friend',
       'Never have I ever been in a long-distance friendship',
@@ -143,6 +174,11 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever had a friend become family',
       'Never have I ever been in a friend group drama',
       'Never have I ever made a friend while traveling',
+      'Never have I ever laughed during a serious argument',
+      'Never have I ever had an inside joke that no one else understood',
+      'Never have I ever crashed at a friend’s place unexpectedly',
+      'Never have I ever gone on a family trip I didn’t want to be on',
+      'Never have I ever shared a secret and instantly regretted it'
     ]
   },
   {
@@ -151,6 +187,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Wild nights and party adventures',
     color: '#e74c3c',
     icon: '🍻',
+    matureContent: true,
     questions: [
       'Never have I ever been to a house party',
       'Never have I ever danced on a table',
@@ -185,6 +222,7 @@ export const gameCategories: GameCategory[] = [
     description: 'Love, dating, and romantic adventures',
     color: '#9b59b6',
     icon: '💕',
+    matureContent: true,
     questions: [
       'Never have I ever been on a blind date',
       'Never have I ever had a one-night stand',
@@ -219,6 +257,7 @@ export const gameCategories: GameCategory[] = [
     description: 'The most daring and outrageous experiences',
     color: '#f39c12',
     icon: '🔥',
+    matureContent: true,
     questions: [
       'Never have I ever skinny dipped',
       'Never have I ever streaked in public',

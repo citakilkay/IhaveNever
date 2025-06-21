@@ -11,6 +11,7 @@ export interface GameCategory {
   color: string;
   icon: string;
   questions: string[];
+  matureContent: boolean;
 }
 
 export interface GameState {

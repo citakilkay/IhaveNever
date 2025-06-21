@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Modal, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -6,14 +6,23 @@ import { gameCategories } from '@/data/categories';
 import { GameCategory } from '@/types/game';
 import { useSetAtom } from 'jotai';
 import { startGameAtom } from '@/atoms/game';
+import { useState } from 'react';
+import AgeConfirmationModal from '@/components/AgeConfirmationModal';
 
 export default function CategoriesScreen() {
   const startGame = useSetAtom(startGameAtom);
+  const [matureCategory, setMatureCategory] = useState<GameCategory | null>(null)
 
-  const handleCategoryPress = (category: GameCategory) => {
+  const handleGameStart = (category: GameCategory) => {
+    setMatureCategory(null)
     startGame(category);
     router.push('/game');
   };
+
+  const handleCategoryPress = (category: GameCategory) => {
+    if (category.matureContent) setMatureCategory(category)
+    else handleGameStart(category)
+  }
 
   return (
     <LinearGradient
@@ -30,14 +39,20 @@ export default function CategoriesScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        {gameCategories.map((category) => (
+        {[...gameCategories].sort(() => Math.random() - 0.5).map((category) => (
           <CategoryCard
             key={category.id}
             category={category}
-            onPress={handleCategoryPress}
+            onPress={() => handleCategoryPress(category)}
           />
         ))}
       </ScrollView>
+      <AgeConfirmationModal
+        visible={!!matureCategory}
+        onConfirm={() => handleGameStart(matureCategory!!)}
+        onCancel={() => setMatureCategory(null)}
+      // yesColor={matureCategory?.color}
+      />
     </LinearGradient>
   );
 }
