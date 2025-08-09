@@ -7,7 +7,7 @@ import * as Application from 'expo-application';
 export default function SettingsScreen() {
   const handleAbout = () => {
     Alert.alert(
-      'About I Have Never',
+      'About Never Have I Ever',
       'A fun party game for groups of friends! Select a category and take turns reading questions. Drink if you HAVE done the thing mentioned in the question.\n\nVersion 1.0.0',
       [{ text: 'OK' }]
     );

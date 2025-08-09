@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "I Have Never",
-    "slug": "i-have-never",
+    "name": "Never Have I Ever",
+    "slug": "never-have-i-ever",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/adaptive-icon.png",
@@ -9,13 +9,13 @@
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000",
-      "androidMode": "default" 
+      "androidMode": "default"
     },
-    "scheme": "ihavenever",
+    "scheme": "neverhaveiever",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "android": {
-      "package": "com.valkara.ihavenever",
+      "package": "com.SmallKwonDo.neverhaveiever",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -23,7 +23,7 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.valkara.ihavenever",
+      "bundleIdentifier": "com.SmallKwonDo.neverhaveiever",
       "buildNumber": "1.0.0"
     },
     "web": {

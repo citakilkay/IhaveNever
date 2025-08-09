@@ -30,7 +30,8 @@ export default function CategoriesScreen() {
       style={styles.container}
     >
       <View style={styles.header}>
-        <Text style={styles.title}>I Have Never</Text>
+        <Text style={styles.title}>Never Have I Ever</Text>
+        <Text style={styles.title2}><Text style={{ color: '#7db99dff' }}>Mild</Text> & <Text style={{ color: '#e75747ff' }}>Wild</Text></Text>
         <Text style={styles.subtitle}>Choose a category to start playing!</Text>
       </View>
 
@@ -72,6 +73,13 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '800',
     marginBottom: 8,
+    textAlign: 'center',
+  },
+  title2: {
+    color: '#f9f9f9',
+    fontSize: 28,
+    fontWeight: '600',
+    marginBottom: 5,
     textAlign: 'center',
   },
   subtitle: {
