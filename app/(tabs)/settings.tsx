@@ -19,8 +19,8 @@ export default function SettingsScreen() {
       'Help us improve the game! What features would you like to see?',
       [
         { text: 'Cancel', style: 'cancel' },
-        { 
-          text: 'Send Email', 
+        {
+          text: 'Send Email',
           onPress: () => Linking.openURL('mailto:citakilkay@gmail.com')
         }
       ]
@@ -89,7 +89,7 @@ export default function SettingsScreen() {
       <View style={styles.content}>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Game Info</Text>
-          
+
           <TouchableOpacity style={styles.option} onPress={handleAbout}>
             <View style={styles.optionLeft}>
               <View style={[styles.optionIcon, { backgroundColor: '#4ecdc4' }]}>
@@ -134,7 +134,11 @@ export default function SettingsScreen() {
             2. Choose a category{'\n'}
             3. Read the question aloud{'\n'}
             4. Anyone who HAS done it drinks!{'\n'}
-            5. Tap "Next Question" to continue
+            5. Tap "Next Question" to continue{'\n'}
+            <Text style={{ fontWeight: '600', color: "#d9dce8ff" }}>
+              Note: {' '}
+            </Text>
+            Share the story behind it if you drank it to make it more fun 🎉
           </Text>
         </View>
 
