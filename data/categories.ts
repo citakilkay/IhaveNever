@@ -28,7 +28,16 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever locked myself out of my house',
       'Never have I ever tried to learn a TikTok dance',
       'Never have I ever talked to a pet like it’s a person',
-      'Never have I ever stayed up all night binge-watching videos'
+      'Never have I ever stayed up all night binge-watching videos',
+      'Never have I ever broken a bone',
+      'Never have I ever lied about my age',
+      'Never have I ever been on TV',
+      'Never have I ever ridden a horse',
+      'Never have I ever had surgery',
+      'Never have I ever been in a car accident',
+      'Never have I ever fallen asleep in public',
+      'Never have I ever made a prank call',
+      'Never have I ever walked into a glass door'
     ]
   },
   {
@@ -58,7 +67,9 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever tried to speak a language I don’t know',
       'Never have I ever traveled without booking a place to stay',
       'Never have I ever been caught in a travel scam',
-      'Never have I ever extended a trip just because I loved the place'
+      'Never have I ever extended a trip just because I loved the place',
+      'Never have I ever been in a car accident',
+      'Never have I ever walked into the wrong bathroom'
     ]
   },
   {
@@ -118,7 +129,9 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever used incognito mode',
       'Never have I ever spent hours watching random YouTube videos',
       'Never have I ever responded “LOL” without actually laughing',
-      'Never have I ever dropped my phone on my face in bed'
+      'Never have I ever dropped my phone on my face in bed',
+      'Never have I ever been on TV',
+      'Never have I ever made a prank call'
     ]
   },
   {
@@ -248,7 +261,9 @@ export const gameCategories: GameCategory[] = [
       'Never have I ever waited hours for a text back',
       'Never have I ever imagined marrying someone on a first date',
       'Never have I ever accidentally said “I love you” too soon',
-      'Never have I ever had butterflies before a date'
+      'Never have I ever had butterflies before a date',
+      'Never have I ever lied about my age',
+      'Never have I ever had a crush on a friend’s sibling'
     ],
   },
   {

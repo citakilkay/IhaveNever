@@ -1,6 +1,8 @@
-import { View, Text, StyleSheet, TouchableOpacity, Alert, Linking } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert, Linking, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Info, Heart, Star, MessageCircle } from 'lucide-react-native';
+import * as StoreReview from 'expo-store-review';
+import * as Application from 'expo-application';
 
 export default function SettingsScreen() {
   const handleAbout = () => {
@@ -25,13 +27,51 @@ export default function SettingsScreen() {
     );
   };
 
+  // --- RATE APP: in-app prompt if available, otherwise open store listing
+  const openStoreListing = async () => {
+    // TODO: replace with your real App Store ID after you create the app record.
+    const IOS_APP_ID = '0000000000'; // e.g. '1234567890'
+    const ANDROID_PACKAGE = Application.applicationId ?? 'your.android.package';
+
+    const storeUrl = Platform.select({
+      ios: `itms-apps://itunes.apple.com/app/id${IOS_APP_ID}?action=write-review`,
+      android: `market://details?id=${ANDROID_PACKAGE}`,
+    }) as string;
+
+    const webFallback = Platform.select({
+      ios: `https://apps.apple.com/app/id${IOS_APP_ID}`,
+      android: `https://play.google.com/store/apps/details?id=${ANDROID_PACKAGE}`,
+    }) as string;
+
+    try {
+      const supported = await Linking.canOpenURL(storeUrl);
+      if (supported) return Linking.openURL(storeUrl);
+      return Linking.openURL(webFallback);
+    } catch {
+      return Linking.openURL(webFallback);
+    }
+  };
+
+  const requestRating = async () => {
+    try {
+      const available = await StoreReview.isAvailableAsync();
+      if (available) {
+        await StoreReview.requestReview(); // native in-app rating prompt (system decides when to show)
+      } else {
+        await openStoreListing();
+      }
+    } catch {
+      await openStoreListing();
+    }
+  };
+
   const handleRate = () => {
     Alert.alert(
       'Rate the App',
       'Enjoying the game? Please rate us in the app store!',
       [
         { text: 'Later', style: 'cancel' },
-        { text: 'Rate Now', onPress: () => {} }
+        { text: 'Rate Now', onPress: requestRating }
       ]
     );
   };
@@ -110,39 +150,18 @@ export default function SettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: { flex: 1 },
   header: {
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 30,
     alignItems: 'center',
   },
-  title: {
-    color: '#fff',
-    fontSize: 32,
-    fontWeight: '800',
-    marginBottom: 8,
-  },
-  subtitle: {
-    color: '#8892b0',
-    fontSize: 16,
-    textAlign: 'center',
-  },
-  content: {
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-  section: {
-    marginBottom: 32,
-  },
-  sectionTitle: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '700',
-    marginBottom: 16,
-  },
+  title: { color: '#fff', fontSize: 32, fontWeight: '800', marginBottom: 8 },
+  subtitle: { color: '#8892b0', fontSize: 16, textAlign: 'center' },
+  content: { flex: 1, paddingHorizontal: 20 },
+  section: { marginBottom: 32 },
+  sectionTitle: { color: '#fff', fontSize: 18, fontWeight: '700', marginBottom: 16 },
   option: {
     backgroundColor: 'rgba(255,255,255,0.05)',
     borderRadius: 12,
@@ -151,28 +170,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.1)',
   },
-  optionLeft: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
+  optionLeft: { flexDirection: 'row', alignItems: 'center' },
   optionIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 16,
+    width: 40, height: 40, borderRadius: 20,
+    alignItems: 'center', justifyContent: 'center', marginRight: 16,
   },
-  optionTitle: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600',
-    marginBottom: 2,
-  },
-  optionSubtitle: {
-    color: '#8892b0',
-    fontSize: 14,
-  },
+  optionTitle: { color: '#fff', fontSize: 16, fontWeight: '600', marginBottom: 2 },
+  optionSubtitle: { color: '#8892b0', fontSize: 14 },
   gameRules: {
     backgroundColor: 'rgba(255,255,255,0.05)',
     borderRadius: 16,
@@ -181,31 +185,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(255,255,255,0.1)',
   },
-  rulesTitle: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '700',
-    marginBottom: 16,
-    textAlign: 'center',
-  },
-  rulesText: {
-    color: '#8892b0',
-    fontSize: 16,
-    lineHeight: 24,
-    textAlign: 'left',
-  },
-  footer: {
-    alignItems: 'center',
-    paddingBottom: 40,
-  },
-  footerContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  footerText: {
-    color: '#8892b0',
-    fontSize: 14,
-    marginLeft: 8,
-    fontStyle: 'italic',
-  },
+  rulesTitle: { color: '#fff', fontSize: 18, fontWeight: '700', marginBottom: 16, textAlign: 'center' },
+  rulesText: { color: '#8892b0', fontSize: 16, lineHeight: 24, textAlign: 'left' },
+  footer: { alignItems: 'center', paddingBottom: 40 },
+  footerContent: { flexDirection: 'row', alignItems: 'center' },
+  footerText: { color: '#8892b0', fontSize: 14, marginLeft: 8, fontStyle: 'italic' },
 });
