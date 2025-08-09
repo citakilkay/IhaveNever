@@ -101,19 +101,14 @@ export default function GameScreen() {
       </View>
 
       <View style={styles.content}>
-        <View>
-          <QuestionCard
-            ref={questionCardRef}
-            question={gameState.currentQuestion}
-            questionNumber={gameState.questionIndex + 1}
-            totalQuestions={gameState.currentCategory.questions.length}
-            categoryColor={gameState.currentCategory.color}
-          />
-          {/* Note below question */}
-          <Text style={styles.note}>
-            Share the story behind it if you drank it to make it more fun 🎉
-          </Text>
-        </View>
+        <QuestionCard
+          ref={questionCardRef}
+          question={gameState.currentQuestion}
+          questionNumber={gameState.questionIndex + 1}
+          totalQuestions={gameState.currentCategory.questions.length}
+          categoryColor={gameState.currentCategory.color}
+        />
+
         <TouchableOpacity
           style={[styles.nextButton, { backgroundColor: gameState.currentCategory.color }]}
           onPress={handleNextQuestion}
@@ -217,11 +212,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
   },
-  note: {
-    color: '#d3cdcdff',
-    fontSize: 10,
-    fontWeight: '400',
-    marginTop: 0,
-    textAlign: 'center',
-  }
 });
