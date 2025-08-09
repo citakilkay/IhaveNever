@@ -1,21 +1,20 @@
 {
   "expo": {
     "name": "Never Have I Ever",
-    "slug": "never-have-i-ever",
+    "slug": "nhie",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/adaptive-icon.png",
+    "icon": "./assets/images/icon.png",
     "splash": {
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000",
-      "androidMode": "default"
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
     },
-    "scheme": "neverhaveiever",
+    "scheme": "nhie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "android": {
-      "package": "com.SmallKwonDo.neverhaveiever",
+      "package": "com.smallkwondo.nhie",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -23,7 +22,7 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.SmallKwonDo.neverhaveiever",
+      "bundleIdentifier": "com.smallkwondo.nhie",
       "buildNumber": "1.0.0"
     },
     "web": {
@@ -38,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e4d1cd41-8814-456c-9a9a-2a7ec7eb9057"
+      }
+    },
+    "owner": "ilkaycitak"
   }
 }
