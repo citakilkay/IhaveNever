@@ -15,7 +15,8 @@
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#080418"
+        "backgroundColor": "#080418",
+        "resizeMode": "contain"
       },
       "splash": {
         "image": "./assets/images/splash.png",
